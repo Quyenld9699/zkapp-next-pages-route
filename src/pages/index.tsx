@@ -28,7 +28,20 @@ export default function Home() {
     const [displayText, setDisplayText] = useState('');
     const [transactionlink, setTransactionLink] = useState('');
     const [statusAddOne, setStatusAddOne] = useState<string>('...');
+    const [num, setNum] = useState<string>('...');
 
+    async function getNumber() {
+        if (state.zkApp) {
+            setNum('Loading...');
+
+            try {
+                await fetchAccount({ publicKey: state.zkappPublicKey! });
+                setNum(state.zkApp.num.get().toString());
+            } catch (err) {
+                setNum((err as Error).message);
+            }
+        }
+    }
     async function addToNum() {
         setStatusAddOne('Loading...');
         try {
@@ -70,14 +83,6 @@ export default function Home() {
     }
 
     useEffect(() => {
-        async function timeout(seconds: number): Promise<void> {
-            return new Promise<void>((resolve) => {
-                setTimeout(() => {
-                    resolve();
-                }, seconds * 1000);
-            });
-        }
-
         (async () => {
             if (!state.hasBeenSetup) {
                 setDisplayText('Loading web worker...');
@@ -119,7 +124,7 @@ export default function Home() {
                 console.log('zkApp compiled');
                 setDisplayText('zkApp compiled...');
 
-                const zkappPublicKey = PublicKey.fromBase58('B62qrhWzYXdEHzH1xaHoNG3BP2Gr4hs4RGDo7gpyDMWTUYeiiUPErQb');
+                const zkappPublicKey = PublicKey.fromBase58('B62qn5Tmm1x2nC8UEnSMdEcMQW3KZEk1e7Pc4JyPmYy1nbQ9MoB9Gyd');
 
                 const zkapp = new Add!(zkappPublicKey);
 
@@ -190,9 +195,11 @@ export default function Home() {
             <div style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <div style={{ padding: 0 }}>Current state in zkApp: {state.currentNum!.toString()} </div>
                 <button onClick={addToNum} disabled={state.creatingTransaction}>
-                    Send Transaction | {statusAddOne}
+                    Send Transaction
                 </button>
-                <button>Get Latest State</button>
+                | {statusAddOne}
+                <br />
+                <button onClick={getNumber}>Get Latest State</button> | {num}
             </div>
         );
     }
