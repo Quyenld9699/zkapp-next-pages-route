@@ -51,7 +51,7 @@ function MenuItem({ index }: { index: number }) {
                         <IconItem sx={{ fontSize: '26px', color: activeItem ? '#F1F6F5' : '#043E35' }} />
                     </Box>
                     <Box sx={{ pl: 1 }}>
-                        <Typography fontWeight={600} sx={{ color: activeItem ? '#F1F6F5' : '#717171' }}>
+                        <Typography fontWeight={600} sx={{ color: activeItem ? '#F1F6F5' : 'text.secondary' }}>
                             {menuItem.title}
                         </Typography>
                     </Box>
@@ -77,7 +77,7 @@ function SubMenuItem({ indexParent, indexSubmenu }: { indexParent: number; index
                 <Box sx={{ display: 'flex', placeItems: 'center', cursor: 'pointer', '&:hover': { background: activeItem ? '' : '#F1F6F5' } }}>
                     <Box sx={{ width: '60px', height: '50px', display: 'flex', justifyContent: 'center', placeItems: 'center' }}></Box>
                     <Box sx={{ pl: 1 }}>
-                        <Typography fontWeight={600} sx={{ color: activeItem ? '#043E35' : '#717171' }}>
+                        <Typography fontWeight={600} sx={{ color: activeItem ? '#043E35' : 'text.secondary' }}>
                             {subMenu.title}
                         </Typography>
                     </Box>

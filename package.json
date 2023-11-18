@@ -12,6 +12,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.18",
+    "@mui/utils": "^5.14.18",
     "bignumber.js": "^9.1.2",
     "coi-serviceworker": "^0.1.7",
     "jotai": "^2.5.1",
