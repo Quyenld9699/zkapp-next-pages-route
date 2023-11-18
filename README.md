@@ -3,7 +3,7 @@
 For UI template
 
 ```bash
-yarn add @mui/material @emotion/react @emotion/styled
+yarn add @mui/material @emotion/react @emotion/styled jotai react-toastify
 ```
 
 For base blockchain app use
