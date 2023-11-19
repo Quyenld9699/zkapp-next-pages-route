@@ -63,7 +63,7 @@ function TableRow() {
                     <Typography fontWeight={600}>1</Typography>
                 </Grid>
                 <Grid item xs={2.5}>
-                    <Typography>Auxo's public committee</Typography>
+                    <Typography>Auxos public committee</Typography>
                 </Grid>
                 <Grid item xs={1.2}>
                     <Typography>Pending</Typography>
