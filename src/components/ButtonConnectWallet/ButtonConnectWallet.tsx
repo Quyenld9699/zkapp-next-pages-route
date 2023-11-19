@@ -10,17 +10,15 @@ export default function ButtonConnectWallet() {
     return (
         <Box ml={'auto'}>
             {isConnecting ? (
-                <Button variant="outlined" sx={{ borderRadius: '5px 12px 5px 12px', textTransform: 'none' }} disabled color="success">
+                <Button variant="outlined" disabled>
                     Connecting...
                 </Button>
             ) : (
                 <>
                     {userAddress ? (
-                        <Button variant="outlined" sx={{ borderRadius: '5px 12px 5px 12px', textTransform: 'none' }} color="success">
-                            {formatAddress(userAddress)}
-                        </Button>
+                        <Button variant="contained">{formatAddress(userAddress)}</Button>
                     ) : (
-                        <Button variant="outlined" sx={{ borderRadius: '5px 12px 5px 12px', textTransform: 'capitalize' }} color="success" onClick={connectWallet}>
+                        <Button variant="outlined" onClick={connectWallet}>
                             Connect wallet
                         </Button>
                     )}

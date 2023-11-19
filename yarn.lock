@@ -7,6 +7,21 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
+"@auxo-dev/auxo-libs@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@auxo-dev/auxo-libs/-/auxo-libs-0.3.1.tgz#4cf7f72487b8b83360297395e52cf61df92db424"
+  integrity sha512-AKWhWWq+sqaPJonHbHzZzJdlC8qgoCEwz536k7KszsYz8s5LX1m+4/P7rqOtNfPvPec3yb5FCq8EU7a+6MxRKw==
+  dependencies:
+    o1js "^0.14.1"
+
+"@auxo-dev/dkg@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@auxo-dev/dkg/-/dkg-0.2.2.tgz#b0e69052a96502925b262ed55abbb01e9ed94d4f"
+  integrity sha512-d7NF0hQ9CbVEQMsRSMvV/IR+BSP2+Iokh7DE88xIL4/g0PT7GKuk2lln8d4IVd9lmdAe2x11okP9iP/FICYezw==
+  dependencies:
+    "@auxo-dev/auxo-libs" "^0.3.1"
+    o1js "^0.14.1"
+
 "@babel/code-frame@^7.0.0":
   version "7.22.13"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.22.13.tgz#e3c1c099402598483b7a8c46a721d1038803755e"
@@ -259,6 +274,13 @@
   version "5.14.18"
   resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.14.18.tgz#f8b187dc89756fa5c0b7d15aea537a6f73f0c2d8"
   integrity sha512-yFpF35fEVDV81nVktu0BE9qn2dD/chs7PsQhlyaV3EnTeZi9RZBuvoEfRym1/jmhJ2tcfeWXiRuHG942mQXJJQ==
+
+"@mui/icons-material@^5.14.18":
+  version "5.14.18"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.14.18.tgz#9e92964cde8c7ba32cf50438a83403dc283f2328"
+  integrity sha512-o2z49R1G4SdBaxZjbMmkn+2OdT1bKymLvAYaB6pH59obM1CYv/0vAVm6zO31IqhwtYwXv6A7sLIwCGYTaVkcdg==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
 
 "@mui/material@^5.14.18":
   version "5.14.18"
